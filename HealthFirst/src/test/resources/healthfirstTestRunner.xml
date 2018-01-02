@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="HF" parallel="none">
+
+    <test name="Test HF">
+        <parameter name="browser_name" value="firefox"/>
+        <parameter name="operating_system" value="mac"/>
+        <parameter name="URL" value="https://healthfirst.org/"/>
+
+        <classes>
+            <class name="testcases.TestHomePage"/>
+        </classes>
+    </test>
+
+</suite>

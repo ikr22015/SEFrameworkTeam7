@@ -1,14 +1,11 @@
 package base;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.*;
-
 import java.util.concurrent.TimeUnit;
 
 public class CommonAPI {
-
     public static WebDriver driver = null;
 
     @BeforeMethod
@@ -20,10 +17,12 @@ public class CommonAPI {
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         driver.manage().timeouts().pageLoadTimeout(35,TimeUnit.SECONDS);
     }
+
     @AfterMethod
     public void teardown(){
         driver.quit();
     }
+
     public void getLocalDriver(String browserName, String os){
         if (browserName.equalsIgnoreCase("chrome")){
             if (os.equalsIgnoreCase("windows")){
@@ -35,10 +34,10 @@ public class CommonAPI {
             }
         }else if (browserName.equalsIgnoreCase("firefox")){
             if (os.equalsIgnoreCase("windows")){
-                System.setProperty("webdriver.chrome.driver","../Generic/drivers/geckodriver.exe");
+                System.setProperty("webdriver.gecko.driver","../Generic/drivers/geckodriver.exe");
                 driver = new FirefoxDriver();
             }else if (os.equalsIgnoreCase("mac")){
-                System.setProperty("webdriver.chrome.driver","../Generic/drivers/geckodriver");
+                System.setProperty("webdriver.gecko.driver","../Generic/drivers/geckodriver");
                 driver = new FirefoxDriver();
             }
         }
