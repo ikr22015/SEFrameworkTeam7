@@ -9,14 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>UnitedHealthcare</artifactId>
-    <dependencies>
-        <dependency>
-            <groupId>pageObjectModel</groupId>
-            <artifactId>Generic</artifactId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
-    </dependencies>
+    <artifactId>HealthFirst</artifactId>
 
 
 </project>
